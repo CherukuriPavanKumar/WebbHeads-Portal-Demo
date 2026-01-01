@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Visits - PropEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <span>PropEdge</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search site visits...">
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn">
+                <i class="fas fa-bell"></i>
+                <span class="badge">5</span>
+            </button>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=0B5FFF&color=fff" alt="User">
+                <span>John Doe</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="leads.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Leads</span>
+            </a>
+            <a href="properties.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Properties</span>
+            </a>
+            <a href="deals.html" class="nav-item">
+                <i class="fas fa-handshake"></i>
+                <span>Deals</span>
+            </a>
+            <a href="site-visits.html" class="nav-item active">
+                <i class="fas fa-calendar-check"></i>
+                <span>Site Visits</span>
+            </a>
+            <a href="clients.html" class="nav-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Clients</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+        <div class="page-header">
+            <div>
+                <h1><i class="fas fa-calendar-check"></i> Site Visits</h1>
+                <p class="page-subtitle">Schedule and manage property site visits</p>
+            </div>
+            <button class="btn btn-primary" id="scheduleVisitBtn">
+                <i class="fas fa-plus"></i> Schedule Visit
+            </button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fas fa-calendar-day"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Today's Visits</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Completed This Month</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Upcoming</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">68%</div>
+                    <div class="stat-label">Conversion Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div class="filters">
+                <input type="date" class="filter-select">
+                <select class="filter-select">
+                    <option>All Status</option>
+                    <option>Scheduled</option>
+                    <option>Completed</option>
+                    <option>Cancelled</option>
+                    <option>Missed</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Agents</option>
+                </select>
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active"><i class="fas fa-calendar"></i></button>
+                <button class="view-btn"><i class="fas fa-list"></i></button>
+            </div>
+        </div>
+
+        <div class="calendar-view" id="siteVisitsCalendar">
+            <!-- Calendar or list view -->
+        </div>
+
+        <div class="data-table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Visit ID</th>
+                        <th>Property</th>
+                        <th>Client</th>
+                        <th>Date & Time</th>
+                        <th>Agent</th>
+                        <th>Status</th>
+                        <th>Feedback</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="visitsTableBody">
+                    <!-- Dynamic content -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Schedule Visit Modal -->
+    <div id="scheduleVisitModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-calendar-plus"></i> Schedule Site Visit</h2>
+                <button class="modal-close" onclick="closeModal('scheduleVisitModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="scheduleVisitForm">
+                    <div class="form-group">
+                        <label>Property <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="property" required placeholder="Enter property name">
+                    </div>
+                    <div class="form-group">
+                        <label>Client Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="client" required placeholder="Enter client name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date <span class="required">*</span></label>
+                            <input type="date" class="form-control" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Time <span class="required">*</span></label>
+                            <input type="time" class="form-control" name="time" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Assigned Agent <span class="required">*</span></label>
+                            <select class="form-control" name="agent" required>
+                                <option value="">Select agent</option>
+                                <option value="John Doe" selected>John Doe</option>
+                                <option value="Sarah Johnson">Sarah Johnson</option>
+                                <option value="Mike Wilson">Mike Wilson</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Status <span class="required">*</span></label>
+                            <select class="form-control" name="status" required>
+                                <option value="">Select status</option>
+                                <option value="Scheduled" selected>Scheduled</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Cancelled">Cancelled</option>
+                                <option value="Missed">Missed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Client Contact</label>
+                        <input type="tel" class="form-control" name="clientContact" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>Notes</label>
+                        <textarea class="form-control" name="notes" placeholder="Add any special instructions or notes..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" onclick="closeModal('scheduleVisitModal')">Cancel</button>
+                <button type="submit" form="scheduleVisitForm" class="btn btn-primary">
+                    <i class="fas fa-calendar-check"></i> Schedule Visit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="site-visits.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - PropEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <span>PropEdge</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search properties...">
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" id="notificationBtn">
+                <i class="fas fa-bell"></i>
+                <span class="badge">5</span>
+            </button>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=0B5FFF&color=fff" alt="User">
+                <span>John Doe</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="leads.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Leads</span>
+            </a>
+            <a href="properties.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Properties</span>
+            </a>
+            <a href="deals.html" class="nav-item">
+                <i class="fas fa-handshake"></i>
+                <span>Deals</span>
+            </a>
+            <a href="site-visits.html" class="nav-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Site Visits</span>
+            </a>
+            <a href="clients.html" class="nav-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Clients</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+        <div class="page-header">
+            <div>
+                <h1><i class="fas fa-home"></i> Property Inventory</h1>
+                <p class="page-subtitle">Manage your property listings</p>
+            </div>
+            <button class="btn btn-primary" id="addPropertyBtn">
+                <i class="fas fa-plus"></i> Add New Property
+            </button>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fas fa-list"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">47</div>
+                    <div class="stat-label">Active Listings</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Sold This Month</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Under Negotiation</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">₹145Cr</div>
+                    <div class="stat-label">Total Inventory Value</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="toolbar">
+            <div class="filters">
+                <select class="filter-select">
+                    <option>All Types</option>
+                    <option>Apartment</option>
+                    <option>Villa</option>
+                    <option>Plot</option>
+                    <option>Commercial</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Status</option>
+                    <option>Available</option>
+                    <option>Under Negotiation</option>
+                    <option>Sold</option>
+                    <option>On Hold</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Locations</option>
+                    <option>Whitefield</option>
+                    <option>Koramangala</option>
+                    <option>HSR Layout</option>
+                    <option>Electronic City</option>
+                </select>
+                <input type="text" class="filter-select" placeholder="Min Price">
+                <input type="text" class="filter-select" placeholder="Max Price">
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn"><i class="fas fa-list"></i></button>
+                <button class="view-btn active"><i class="fas fa-th"></i></button>
+            </div>
+        </div>
+
+        <!-- Properties Grid -->
+        <div class="properties-grid" id="propertiesGrid">
+            <!-- Dynamic content -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Add Property Modal -->
+    <div id="addPropertyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-home"></i> Add New Property</h2>
+                <button class="modal-close" onclick="closeModal('addPropertyModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addPropertyForm">
+                    <div class="form-group">
+                        <label>Property Title <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="title" required placeholder="e.g., Prestige Lakeside Habitat">
+                    </div>
+                    <div class="form-group">
+                        <label>Location <span class="required">*</span></label>
+                        <input type="text" class="form-control" name="location" required placeholder="e.g., Whitefield, Bangalore">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Type <span class="required">*</span></label>
+                            <select class="form-control" name="type" required>
+                                <option value="">Select type</option>
+                                <option value="Apartment">Apartment</option>
+                                <option value="Villa">Villa</option>
+                                <option value="Plot">Plot</option>
+                                <option value="Independent House">Independent House</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Price <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="price" required placeholder="e.g., ₹95 Lakhs">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Area (sq.ft) <span class="required">*</span></label>
+                            <input type="text" class="form-control" name="area" required placeholder="e.g., 1850 sq.ft">
+                        </div>
+                        <div class="form-group">
+                            <label>Bedrooms <span class="required">*</span></label>
+                            <select class="form-control" name="bedrooms" required>
+                                <option value="">Select</option>
+                                <option value="1 BHK">1 BHK</option>
+                                <option value="2 BHK">2 BHK</option>
+                                <option value="3 BHK">3 BHK</option>
+                                <option value="4 BHK">4 BHK</option>
+                                <option value="5 BHK">5 BHK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Bathrooms <span class="required">*</span></label>
+                            <select class="form-control" name="bathrooms" required>
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Status <span class="required">*</span></label>
+                            <select class="form-control" name="status" required>
+                                <option value="">Select status</option>
+                                <option value="Available" selected>Available</option>
+                                <option value="Under Negotiation">Under Negotiation</option>
+                                <option value="Sold">Sold</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-control" name="description" placeholder="Add property description..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" onclick="closeModal('addPropertyModal')">Cancel</button>
+                <button type="submit" form="addPropertyForm" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Property
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="properties.js"></script>
+</body>
+</html>

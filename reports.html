@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - PropEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <span>PropEdge</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search reports...">
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn">
+                <i class="fas fa-bell"></i>
+                <span class="badge">5</span>
+            </button>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=0B5FFF&color=fff" alt="User">
+                <span>John Doe</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="leads.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Leads</span>
+            </a>
+            <a href="properties.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Properties</span>
+            </a>
+            <a href="deals.html" class="nav-item">
+                <i class="fas fa-handshake"></i>
+                <span>Deals</span>
+            </a>
+            <a href="site-visits.html" class="nav-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Site Visits</span>
+            </a>
+            <a href="clients.html" class="nav-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Clients</span>
+            </a>
+            <a href="reports.html" class="nav-item active">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+        <div class="page-header">
+            <div>
+                <h1><i class="fas fa-chart-bar"></i> Reports & Analytics</h1>
+                <p class="page-subtitle">Comprehensive business insights and performance metrics</p>
+            </div>
+            <button class="btn btn-primary">
+                <i class="fas fa-download"></i> Export Report
+            </button>
+        </div>
+
+        <div class="toolbar">
+            <div class="filters">
+                <select class="filter-select">
+                    <option>This Month</option>
+                    <option>Last Month</option>
+                    <option>This Quarter</option>
+                    <option>This Year</option>
+                    <option>Custom Range</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Agents</option>
+                    <option>John Doe</option>
+                    <option>Sarah Johnson</option>
+                    <option>Mike Wilson</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="reports-grid">
+            <div class="report-card">
+                <div class="report-header">
+                    <h3><i class="fas fa-chart-line"></i> Sales Performance</h3>
+                    <button class="icon-btn"><i class="fas fa-download"></i></button>
+                </div>
+                <div class="report-content">
+                    <div class="metric-large">₹2.85Cr</div>
+                    <div class="metric-label">Total Sales This Month</div>
+                    <div class="chart-placeholder">
+                        <div class="mini-chart">📈 Chart visualization area</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-card">
+                <div class="report-header">
+                    <h3><i class="fas fa-funnel-dollar"></i> Lead Conversion</h3>
+                    <button class="icon-btn"><i class="fas fa-download"></i></button>
+                </div>
+                <div class="report-content">
+                    <div class="metric-large">32%</div>
+                    <div class="metric-label">Conversion Rate</div>
+                    <div class="conversion-stats">
+                        <div class="stat-row">
+                            <span>Total Leads:</span>
+                            <strong>127</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>Converted:</span>
+                            <strong>41</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span>In Progress:</span>
+                            <strong>68</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-card">
+                <div class="report-header">
+                    <h3><i class="fas fa-user-friends"></i> Agent Performance</h3>
+                    <button class="icon-btn"><i class="fas fa-download"></i></button>
+                </div>
+                <div class="report-content">
+                    <div class="agent-rankings">
+                        <div class="ranking-item">
+                            <span class="rank">1</span>
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=10B981&color=fff" class="agent-avatar">
+                            <div class="agent-info">
+                                <div class="agent-name">John Doe</div>
+                                <div class="agent-stats">12 deals • ₹8.5L commission</div>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="rank">2</span>
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=0B5FFF&color=fff" class="agent-avatar">
+                            <div class="agent-info">
+                                <div class="agent-name">Sarah Johnson</div>
+                                <div class="agent-stats">9 deals • ₹6.2L commission</div>
+                            </div>
+                        </div>
+                        <div class="ranking-item">
+                            <span class="rank">3</span>
+                            <img src="https://ui-avatars.com/api/?name=Mike+Wilson&background=F59E0B&color=fff" class="agent-avatar">
+                            <div class="agent-info">
+                                <div class="agent-name">Mike Wilson</div>
+                                <div class="agent-stats">7 deals • ₹4.8L commission</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="report-card">
+                <div class="report-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> Location Analysis</h3>
+                    <button class="icon-btn"><i class="fas fa-download"></i></button>
+                </div>
+                <div class="report-content">
+                    <div class="location-stats">
+                        <div class="location-item">
+                            <div class="location-name">Whitefield</div>
+                            <div class="location-bar">
+                                <div class="bar-fill" style="width: 85%"></div>
+                            </div>
+                            <div class="location-value">18 properties</div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-name">Koramangala</div>
+                            <div class="location-bar">
+                                <div class="bar-fill" style="width: 72%"></div>
+                            </div>
+                            <div class="location-value">14 properties</div>
+                        </div>
+                        <div class="location-item">
+                            <div class="location-name">HSR Layout</div>
+                            <div class="location-bar">
+                                <div class="bar-fill" style="width: 60%"></div>
+                            </div>
+                            <div class="location-value">11 properties</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="reports.js"></script>
+</body>
+</html>

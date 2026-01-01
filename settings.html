@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - PropEdge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fas fa-building"></i>
+                <span>PropEdge</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search settings...">
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="icon-btn">
+                <i class="fas fa-bell"></i>
+                <span class="badge">5</span>
+            </button>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=0B5FFF&color=fff" alt="User">
+                <span>John Doe</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="leads.html" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Leads</span>
+            </a>
+            <a href="properties.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Properties</span>
+            </a>
+            <a href="deals.html" class="nav-item">
+                <i class="fas fa-handshake"></i>
+                <span>Deals</span>
+            </a>
+            <a href="site-visits.html" class="nav-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Site Visits</span>
+            </a>
+            <a href="clients.html" class="nav-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Clients</span>
+            </a>
+            <a href="reports.html" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <a href="settings.html" class="nav-item active">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+        <div class="page-header">
+            <div>
+                <h1><i class="fas fa-cog"></i> Settings</h1>
+                <p class="page-subtitle">Configure your account and preferences</p>
+            </div>
+        </div>
+
+        <div class="settings-container">
+            <div class="settings-sidebar">
+                <div class="settings-menu">
+                    <a href="#profile" class="settings-menu-item active">
+                        <i class="fas fa-user"></i> Profile Settings
+                    </a>
+                    <a href="#company" class="settings-menu-item">
+                        <i class="fas fa-building"></i> Company Details
+                    </a>
+                    <a href="#users" class="settings-menu-item">
+                        <i class="fas fa-users-cog"></i> User Management
+                    </a>
+                    <a href="#notifications" class="settings-menu-item">
+                        <i class="fas fa-bell"></i> Notifications
+                    </a>
+                    <a href="#integrations" class="settings-menu-item">
+                        <i class="fas fa-plug"></i> Integrations
+                    </a>
+                    <a href="#billing" class="settings-menu-item">
+                        <i class="fas fa-credit-card"></i> Billing & Plans
+                    </a>
+                    <a href="#security" class="settings-menu-item">
+                        <i class="fas fa-shield-alt"></i> Security
+                    </a>
+                </div>
+            </div>
+
+            <div class="settings-content">
+                <div class="settings-section">
+                    <h2>Profile Settings</h2>
+                    <div class="form-group">
+                        <label>Profile Photo</label>
+                        <div class="profile-upload">
+                            <img src="https://ui-avatars.com/api/?name=John+Doe&background=0B5FFF&color=fff&size=100" alt="Profile">
+                            <button class="btn btn-secondary">Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-input" value="John">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-input" value="Doe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-input" value="john.doe@propedge.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-input" value="+91 98765 43210">
+                    </div>
+                    <div class="form-group">
+                        <label>RERA License Number</label>
+                        <input type="text" class="form-input" value="RERA123456789">
+                    </div>
+                    <button class="btn btn-primary">Save Changes</button>
+                </div>
+
+                <div class="settings-section">
+                    <h2>Notification Preferences</h2>
+                    <div class="toggle-group">
+                        <div class="toggle-item">
+                            <div>
+                                <div class="toggle-label">Email Notifications</div>
+                                <div class="toggle-desc">Receive email alerts for new leads and deals</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <div>
+                                <div class="toggle-label">SMS Notifications</div>
+                                <div class="toggle-desc">Get SMS reminders for follow-ups</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-item">
+                            <div>
+                                <div class="toggle-label">Push Notifications</div>
+                                <div class="toggle-desc">Receive browser push notifications</div>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h2>Security Settings</h2>
+                    <div class="form-group">
+                        <label>Current Password</label>
+                        <input type="password" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>New Password</label>
+                        <input type="password" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm New Password</label>
+                        <input type="password" class="form-input">
+                    </div>
+                    <button class="btn btn-primary">Update Password</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="settings.js"></script>
+</body>
+</html>
